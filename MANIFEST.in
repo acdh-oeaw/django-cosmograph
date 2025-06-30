@@ -1,0 +1,2 @@
+recursive-include django_cosmograph/static *
+recursive-include django_cosmograph/templates *

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1>Cosmograph Visualization</h1>
+<div id="cosmograph-root" data-nodes='{{ nodes_json }}' data-links='{{ links_json }}'>
+</div>
+<script type="module" src="{% static 'django_cosmograph/cosmograph.js' %}"></script>
+
+{% endblock %}
