@@ -4,6 +4,7 @@ import { Cosmograph } from '@cosmograph/react'
 export default function App({ data }) {
   return (
     <Cosmograph
+      backgroundColor="transparent"
       nodes={data.nodes}
       links={data.links}
       linkArrows={false}

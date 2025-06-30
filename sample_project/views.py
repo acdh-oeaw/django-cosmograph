@@ -11,7 +11,7 @@ class CustomCosmographView(CosmographView):
 
     def get_nodes_links(self):
         def generate_graph(num_nodes=1000, num_links=3000):
-            colours = ["cyan", "magenta", "goldenrod"]
+            colours = ["cyan", "crimson", "goldenrod"]
             nodes = [
                 {
                     "id": i,
@@ -30,4 +30,4 @@ class CustomCosmographView(CosmographView):
 
             return nodes, links
 
-        return generate_graph(3000, 5000)
+        return generate_graph(3000, 4000)

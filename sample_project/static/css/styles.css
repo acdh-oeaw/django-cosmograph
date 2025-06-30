@@ -1,4 +1,12 @@
 /* styles.css */
+:root {
+  --bg-colour: #002b36;
+  --fg-colour: #839496;
+  --fg-heading-colour: #ccc;
+  --highlight-colour: goldenrod;
+  --warning-colour: sienna;
+  --link-colour: cyan;
+}
 
 /* Reset some defaults */
 * {
@@ -11,69 +19,74 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 1.6;
-  background-color: #f9fafb;
-  color: #333;
+  background-color: var(--bg-colour);
+  color: var(--fg-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 header {
-  background-color: #002b36;
-  color: white;
+  background-color: var(--bg-color);
+  color: var(--fg-headings);
   padding: 1rem 2rem;
 }
 
+a {
+  color: var(--link-colour);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+a:hover {
+  color: var(--highlight-colour);
+}
 header nav a {
-  color: white;
+  color: var(--fg-heading-colour);
   text-decoration: none;
   margin-right: 1.5rem;
   transition: color 0.2s ease-in-out;
 }
 
 header nav a:hover {
-  color: #bfdbfe;
+  color: var(--highlight-colour);
 }
 
 main {
   flex-grow: 1;
   max-width: 100vw;
+  color: var(--fg-colour);
 }
 
 h1, h2, h3 {
-  color: #111827;
+  color: var(--fg-heading-colour);
   margin-bottom: 1rem;
+  font-weight: normal;
+}
+h1 {
+  font-size: xx-large;
 }
 
 p {
   margin-bottom: 1rem;
   font-size: 1rem;
-  color: #4b5563;
+  color: ;
 }
 
-ul {
+ul.features-list {
   list-style-type: disc;
   padding-left: 1.5rem;
   margin-bottom: 1rem;
-  color: #4b5563;
 }
 
 footer {
-  background-color: #1e293b;
-  color: #94a3b8;
+  background-color: var(--bg-colour);
+  color: var(--fg-colour);
   text-align: center;
   padding: 1rem 2rem;
   font-size: 0.875rem;
 }
 
 #cosmograph-root {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: white;
   height: 100%;
-  margin-top: 1.5rem;
 }
 
-cosmograph{
-  background-color: #f9fafb;
-}

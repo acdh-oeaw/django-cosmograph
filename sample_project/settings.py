@@ -1,6 +1,6 @@
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 
 SECRET_KEY = "django-insecure-dummy-key-for-dev"
 
@@ -11,7 +11,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "sample_project",
     "django.contrib.staticfiles",
-    "django_cosmograph",  # Use your package here
+    "django_cosmograph",
 ]
 
 MIDDLEWARE = []
@@ -21,7 +21,7 @@ ROOT_URLCONF = "sample_project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "templates"],  # Optional custom templates
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {},
     },
@@ -30,7 +30,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "sample_project.wsgi.application"
 
 STATIC_URL = "/static/"
-STATICFILES_DIRS = []
+STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
