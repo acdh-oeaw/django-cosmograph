@@ -1,0 +1,17 @@
+[project]
+name = "django-cosmograph"
+version = "0.1.0"
+description = "A django app to get cosmograph visualisations directly in django templates"
+authors = [
+    { name = "Saranya Balasubramanian", email = "saranya.balasubramanian@oeaw.ac.at" }
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "django>=4.2, <6",
+    "hatchling>=1.27.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
